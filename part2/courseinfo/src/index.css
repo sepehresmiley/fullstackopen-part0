@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root { font-family: 'DM Sans', sans-serif; color: #1b2e2b; background: #f3f6f4; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+.page { width: min(900px, calc(100% - 40px)); margin: 64px auto; }
+.eyebrow { color: #24715d; font-size: .74rem; font-weight: 700; letter-spacing: .16em; }
+h1, h2 { font-family: Manrope, sans-serif; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: .5rem 0; letter-spacing: -.045em; }
+.intro { color: #66736e; margin: 0 0 32px; }
+.courses { display: grid; gap: 18px; }
+.course-card { background: white; border: 1px solid #dfe7e1; border-radius: 18px; padding: 24px 28px; box-shadow: 0 8px 24px #132e2510; }
+.course-card h2 { font-size: 1.2rem; margin: 0 0 12px; }
+.parts { list-style: none; margin: 0; padding: 0; }
+.parts li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid #edf1ee; color: #52635c; }
+.parts strong, .total strong { color: #1c6d57; }
+.total { display: flex; justify-content: space-between; font-weight: 700; margin: 18px 0 0; }
+@media (max-width: 520px) { .page { margin: 36px auto; } .course-card { padding: 20px; } }
