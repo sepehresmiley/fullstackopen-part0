@@ -15,7 +15,7 @@ loginRouter.post('/', async (request, response) => {
   if (!valid) return response.status(401).json({ error: 'invalid username or password' })
   if (!config.SECRET) return response.status(500).json({ error: 'login is not configured' })
   const token = jwt.sign({ username: user.username, id: user._id.toString() }, config.SECRET, { expiresIn: '7d' })
-  response.status(200).json({ token, username: user.username, name: user.name })
+  response.status(200).json({ token, id: user._id.toString(), username: user.username, name: user.name })
 })
 
 export default loginRouter
