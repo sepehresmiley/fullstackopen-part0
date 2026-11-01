@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: fullstackopen-phonebook
+    runtime: node
+    plan: free
+    rootDir: part3/phonebook-backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: MONGODB_URI
+        sync: false
